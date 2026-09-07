@@ -51,12 +51,12 @@ body {
 .header-logo-text {
   font-size: 1.7rem;
   font-weight: 700;
-  color: #e6f1e9;
+  color: #ffffff;
   white-space: nowrap;
 }
 
 .header-logo-amp {
-  color: #7ed08a;
+  color: #ffffff;
 }
 
 /* ---- Desktop nav (hidden until 1024px) ---- */
