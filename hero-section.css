@@ -1,0 +1,739 @@
+:root {
+  --primary-color: #333333;
+  --text-secondary: #666666;
+  --accent-blue: #66cce0;
+  --accent-green: #79c97b;
+  --bg-light-green: #f2f9f4;
+  --border-color: #e0e0e0;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+
+/* ============================================================
+   COMMON STYLES
+   ============================================================ */
+
+body {
+  font-family: var(--font-family);
+  color: var(--primary-color);
+  line-height: 1.3;
+  background-color: #ffffff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+
+/* ============================================================
+   MAIN CONTENT — DESKTOP DEFAULT
+   ============================================================ */
+
+.main-content {
+  padding: 24px;
+}
+
+
+/* ============================================================
+   BREADCRUMBS
+   ============================================================ */
+
+.breadcrumbs {
+  margin-bottom: 12px;
+}
+
+.breadcrumbs-items {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.breadcrumbs-item:not(:last-child)::after {
+  content: ">";
+  margin: 0 6px;
+  color: #ccc;
+}
+
+
+/* ============================================================
+   HERO HEADER
+   ============================================================ */
+
+.hero-header {
+  margin-bottom: 16px;
+}
+
+.hero-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.hero-subinfo {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.subinfo-rating,
+.subinfo-time {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.subinfo-rating-image {
+  height: 14px;
+}
+
+.subinfo-time img {
+    height: 12px;
+    width: 12px;
+}
+
+.subinfo-rating-text strong {
+  color: var(--primary-color);
+}
+
+.subinfo-divider {
+  color: #ccc;
+}
+
+
+/* ============================================================
+   MAIN LAYOUT & IMAGES — DESKTOP
+   ============================================================ */
+
+.hero-layout-wrapper {
+  display : flex;
+  gap : 1rem;
+  width: 100%;
+   
+}
+
+.hero-main-column{
+    width : 90%;
+    
+   
+}
+
+.hero-images {
+   
+  position: relative;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2px;
+  margin-bottom: 16px;
+  
+}
+
+.hero-main-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  object-fit: cover;
+  border-radius: 5px 0px 0px 5px;
+ 
+}
+
+
+/* ============================================================
+   CAROUSEL DOTS
+   ============================================================ */
+
+.carousel-dots {
+  display: none;
+}
+
+.carousel-dots .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.carousel-dots .dot.active {
+  background-color: #ffffff;
+}
+
+
+/* ============================================================
+   SIDE IMAGES — DESKTOP
+   ============================================================ */
+
+.hero-side-images {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.upper-side-image,
+.lower-side-image {
+  height: 50%;
+  position: relative;
+}
+
+.upper-side-image img{
+    border-radius: 0px 5px 0px 0px;
+}
+
+.lower-side-image img{
+    border-radius: 0px 0px 5px 0px;
+}
+
+
+
+.hero-side-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+}
+
+.side-image-button {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+
+/* ============================================================
+   MOBILE BOOKING CARDS — DESKTOP HIDDEN
+   ============================================================ */
+
+.mobile-booking-cards {
+  display: none;
+}
+
+.mobile-card {
+  flex: 1;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-lg);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.card-title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+.blue-text {
+  color: #5bc2e7;
+}
+
+.green-text {
+  color: var(--accent-green);
+}
+
+.icon-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.blue-bg {
+  background-color: #5bc2e7;
+}
+
+.green-bg {
+  background-color: var(--accent-green);
+}
+
+.card-stats {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+
+.hide-on-mobile {
+  display: flex;
+}
+
+.stat-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.stat-large {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--primary-color);
+  line-height: 1.2;
+}
+
+.stat-small {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  max-width: 100%;
+  text-transform: uppercase;
+}
+
+
+/* ============================================================
+   MOBILE ACTION BUTTONS
+   ============================================================ */
+
+.mobile-btn {
+  width: 100%;
+  padding: 14px;
+  color: #fff;
+  border: none;
+  border-radius: var(--border-radius-md);
+  font-weight: 700;
+  font-size: 14px;
+  transition: opacity 0.2s;
+}
+
+.mobile-btn:hover {
+  opacity: 0.9;
+}
+
+.blue-btn {
+  background-color: #5bc2e7;
+}
+
+.green-btn {
+  background-color: var(--accent-green);
+}
+
+
+/* ============================================================
+   HERO DESCRIPTION
+   ============================================================ */
+
+.hero-description {
+  margin-top: 2rem;
+  margin-bottom: 24px;
+}
+
+.hero-text {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.hero-read-more-button {
+  background: none;
+  border: none;
+  font-weight: 700;
+  font-size: 10px;
+  margin-left: 4px;
+  padding: 1px;
+  color: var(--text-secondary);
+  text-decoration: underline;
+}
+
+
+/* ============================================================
+   GLANCE BAR — DESKTOP
+   ============================================================ */
+
+.hero-glancebar {
+  width: 70%;
+  background-color: var(--bg-light-green);
+  border-radius: var(--border-radius-lg);
+  padding: 24px 32px;
+  text-align: left;
+  gap: 16px;
+}
+
+.glancebar-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.glancebar-title {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+}
+
+.hero-glance-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 12px 24px;
+}
+
+.hero-glance-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.glance-item-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.glancebar-button {
+  padding: 10px 20px;
+  border: 1px solid var(--primary-color);
+  background-color: transparent;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 600;
+  width: auto;
+  max-width: 250px;
+  margin-top: 0;
+  transition: background-color 0.2s;
+}
+
+.glancebar-button:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+
+/* ============================================================
+   DESKTOP BOOKING FORM
+   ============================================================ */
+
+.desktop-booking-form {
+  display: block;
+  width: 100%;
+}
+
+.hero-card {
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.card-content {
+  padding: 20px;
+  background-color: #fff;
+}
+
+.price-section {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.currency {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.per-night {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.booking-date {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.date-input-group,
+.guest-details {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+}
+
+.date-input-group label,
+.guest-details label {
+  position: absolute;
+  top: 6px;
+  left: 12px;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+input[type="date"],
+select {
+  width: 100%;
+  padding: 24px 12px 8px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  font-size: 14px;
+  font-family: inherit;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.guest-details {
+  margin-bottom: 16px;
+}
+
+.availability-status {
+  background-color: #f0f7f9;
+  color: #0b6b7a;
+  padding: 10px 12px;
+  border-radius: var(--border-radius-md);
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.price-breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+  font-size: 14px;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price-row.total {
+  font-weight: 700;
+}
+
+.check-availability-btn {
+  width: 100%;
+  padding: 14px;
+  background-color: var(--accent-blue);
+  color: #fff;
+  border: none;
+  border-radius: var(--border-radius-md);
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 12px;
+  transition: opacity 0.2s;
+}
+
+.check-availability-btn:hover {
+  opacity: 0.9;
+}
+
+.redirect-notice {
+  text-align: center;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.card-view-count {
+  background-color: #ebeff3;
+  border-top: 1px solid var(--border-color);
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.alternative-suggestion {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 12px;
+  color: var(--text-secondary);
+  background-color: #ebeff3;
+  padding: 15px;
+  
+  font-weight: 550;
+  border-radius:5px ;
+}
+
+.alternative-suggestion a {
+  color: #0066cc;
+  text-decoration: underline;
+}
+
+
+/* ============================================================
+   TABLET — 768px TO 1023px
+   ============================================================ */
+
+@media (max-width: 1023px) {
+
+  .hero-layout-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .desktop-booking-form {
+    display: none;
+  }
+
+  .mobile-booking-cards {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  .carousel-dots {
+    position: absolute;
+    bottom: 12px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  .hero-images {
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  .hero-side-images {
+    display: none;
+  }
+
+  .hero-main-image img {
+    height: 350px;
+    min-height: 0;
+  }
+
+  .hero-glancebar {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    padding: 24px 32px;
+  }
+
+  .glancebar-content {
+    align-items: flex-start;
+  }
+
+  .hero-glance-list {
+    justify-content: flex-start;
+  }
+
+  .glancebar-button {
+    width: auto;
+    margin-top: 0;
+  }
+}
+
+
+/* ============================================================
+   MOBILE — BELOW 768px
+   ============================================================ */
+
+@media (max-width: 767px) {
+
+  .main-content {
+    padding: 16px;
+  }
+
+  .hero-title {
+    font-size: 24px;
+  }
+
+  .hero-subinfo {
+    font-size: 13px;
+  }
+
+  .hero-main-image img {
+    height: 220px;
+  }
+
+  .mobile-card {
+    padding: 12px;
+  }
+
+  .card-title-row {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .icon-circle {
+    width: 28px;
+    height: 28px;
+  }
+
+  .stat-large {
+    font-size: 20px;
+  }
+
+  .stat-small {
+    font-size: 9px;
+    max-width: 65px;
+  }
+
+  .mobile-btn {
+    padding: 10px 4px;
+    font-size: 12px;
+  }
+
+  .hero-text {
+    font-size: 14px;
+  }
+
+  .hide-on-mobile {
+    display: none;
+  }
+
+  .hero-glancebar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    padding: 20px 16px;
+  }
+
+  .glancebar-content {
+    align-items: center;
+  }
+
+  .hero-glance-list {
+    justify-content: center;
+    gap: 12px 24px;
+  }
+
+  .glancebar-button {
+    width: 100%;
+    max-width: 250px;
+  }
+}
+
