@@ -24,10 +24,22 @@
 .accomodations-filter {
   display: flex;
   gap: var(--space-3);
-  overflow-x: hidden;
+  overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
   padding-bottom: 2px; /* room so a focus ring isn't clipped */
+}
+
+.filter-label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 
@@ -236,6 +248,7 @@
   /* The provided copy is a full paragraph; clamp it to a few lines so the
      card matches the compact height shown in the design (see README). */
   display: -webkit-box;
+  line-clamp: 3;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
@@ -420,9 +433,9 @@
    ========================================================================== */
 @media (min-width: 768px) and (max-width: 1023.98px) {
   .accomodations-cards-and-map {
-    display: block;
+    display: flex;
+    flex-direction: column-reverse;
   }
-
   .accomodation-map {
     width: 100%;
     height: 280px;
@@ -437,7 +450,7 @@
 @media (min-width: 1024px) {
 
   .accomodations{
-    width: 75%;
+    width: 80%;
     margin-top: 2rem;
   }
   

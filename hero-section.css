@@ -44,696 +44,701 @@ button {
 }
 
 
-/* ============================================================
-   BREADCRUMBS
-   ============================================================ */
-
-.breadcrumbs {
-  margin-bottom: 12px;
+.hero {
+  max-width: 100%;
+  margin: 0 ;
 }
-
-.breadcrumbs-items {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  font-size: 12px;
-  color: var(--text-secondary);
-}
-
-.breadcrumbs-item:not(:last-child)::after {
-  content: ">";
-  margin: 0 6px;
-  color: #ccc;
-}
-
-
-/* ============================================================
-   HERO HEADER
-   ============================================================ */
-
-.hero-header {
-  margin-bottom: 16px;
-}
-
-.hero-title {
-  font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 8px;
-  line-height: 1.2;
-}
-
-.hero-subinfo {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 8px;
-  font-size: 13px;
-  color: var(--text-secondary);
-}
-
-.subinfo-rating,
-.subinfo-time {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-
-.subinfo-rating-image {
-  height: 14px;
-}
-
-.subinfo-time img {
-    height: 12px;
-    width: 12px;
-}
-
-.subinfo-rating-text strong {
-  color: var(--primary-color);
-}
-
-.subinfo-divider {
-  color: #ccc;
-}
-
-
-/* ============================================================
-   MAIN LAYOUT & IMAGES — DESKTOP
-   ============================================================ */
-
-.hero-layout-wrapper {
-  display : flex;
-  gap : 1rem;
-  width: 100%;
-   
-}
-
-.hero-main-column{
-    width : 90%;
-    
-   
-}
-
-.hero-images {
-   
-  position: relative;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 2px;
-  margin-bottom: 16px;
-  
-}
-
-.hero-main-image img {
-  width: 100%;
-  height: 100%;
-  min-height: 400px;
-  object-fit: cover;
-  border-radius: 5px 0px 0px 5px;
  
+ 
+.page {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 28px 20px 48px;
 }
-
-
-/* ============================================================
-   CAROUSEL DOTS
-   ============================================================ */
-
-.carousel-dots {
-  display: none;
-}
-
-.carousel-dots .dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.5);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.carousel-dots .dot.active {
-  background-color: #ffffff;
-}
-
-
-/* ============================================================
-   SIDE IMAGES — DESKTOP
-   ============================================================ */
-
-.hero-side-images {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.upper-side-image,
-.lower-side-image {
-  height: 50%;
-  position: relative;
-}
-
-.upper-side-image img{
-    border-radius: 0px 5px 0px 0px;
-}
-
-.lower-side-image img{
-    border-radius: 0px 0px 5px 0px;
-}
-
-
-
-.hero-side-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  
-}
-
-.side-image-button {
-  position: absolute;
-  bottom: 16px;
-  right: 16px;
-  background-color: rgba(0, 0, 0, 0.6);
-  color: #fff;
-  border: 1px solid #fff;
-  padding: 8px 16px;
-  border-radius: 20px;
-  font-size: 12px;
-  font-weight: 600;
-}
-
-
-/* ============================================================
-   MOBILE BOOKING CARDS — DESKTOP HIDDEN
-   ============================================================ */
-
-.mobile-booking-cards {
-  display: none;
-}
-
-.mobile-card {
-  flex: 1;
-  border: 1px solid var(--border-color);
-  border-radius: var(--border-radius-lg);
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  background-color: #fff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-}
-
-.card-title-row {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 24px;
-  margin-bottom: 24px;
-}
-
-.blue-text {
-  color: #5bc2e7;
-}
-
-.green-text {
-  color: var(--accent-green);
-}
-
-.icon-circle {
+ 
+/* ==========================================================================
+   ICON SIZING
+   Every icon in this design is an <img> tag. Sizes are set per context
+   below rather than relying on font-size, since these are no longer glyphs.
+   ========================================================================== */
+.icon-star{
   width: 40px;
   height: 40px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
 }
-
-.blue-bg {
-  background-color: #5bc2e7;
+ 
+.icon-clock {
+  width: 14px;
+  height: 14px;
+  vertical-align: middle;
 }
-
-.green-bg {
-  background-color: var(--accent-green);
+ 
+.icon-badge {
+  width: 18px;
+  height: 18px;
+  display: block;
 }
-
-.card-stats {
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 16px;
-  flex-grow: 1;
+ 
+.icon-check {
+  width: 10px;
+  height: 10px;
+  display: block;
 }
-
-.hide-on-mobile {
-  display: flex;
+ 
+.icon-glance {
+  width: 14px;
+  height: 14px;
+  vertical-align: middle;
 }
-
-.stat-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+ 
+.icon-fire {
+  width: 14px;
+  height: 14px;
 }
-
-.stat-large {
-  font-size: 28px;
-  font-weight: 700;
-  color: var(--primary-color);
-  line-height: 1.2;
+ 
+.icon-chevron {
+  width: 9px;
+  height: 9px;
+  vertical-align: middle;
 }
-
-.stat-small {
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--text-secondary);
-  max-width: 100%;
-  text-transform: uppercase;
-}
-
-
-/* ============================================================
-   MOBILE ACTION BUTTONS
-   ============================================================ */
-
-.mobile-btn {
-  width: 100%;
-  padding: 14px;
-  color: #fff;
-  border: none;
-  border-radius: var(--border-radius-md);
-  font-weight: 700;
-  font-size: 14px;
-  transition: opacity 0.2s;
-}
-
-.mobile-btn:hover {
-  opacity: 0.9;
-}
-
-.blue-btn {
-  background-color: #5bc2e7;
-}
-
-.green-btn {
-  background-color: var(--accent-green);
-}
-
-
-/* ============================================================
-   HERO DESCRIPTION
-   ============================================================ */
-
-.hero-description {
-  margin-top: 2rem;
-  margin-bottom: 24px;
-}
-
-.hero-text {
-  font-size: 14px;
-  color: var(--text-secondary);
-  line-height: 1.7;
-}
-
-.hero-read-more-button {
-  background: none;
-  border: none;
-  font-weight: 700;
-  font-size: 10px;
-  margin-left: 4px;
-  padding: 1px;
-  color: var(--text-secondary);
-  text-decoration: underline;
-}
-
-
-/* ============================================================
-   GLANCE BAR — DESKTOP
-   ============================================================ */
-
-.hero-glancebar {
-  width: 70%;
-  background-color: var(--bg-light-green);
-  border-radius: var(--border-radius-lg);
-  padding: 24px 32px;
-  text-align: left;
-  gap: 16px;
-}
-
-.glancebar-content {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.glancebar-title {
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
+ 
+/* ---------- Breadcrumb ---------- */
+/* Visible on mobile + tablet, hidden on desktop (see desktop media query) */
+.breadcrumb {
+  font-size: 13px;
+  color: #8A938D;
   margin-bottom: 12px;
 }
-
-.hero-glance-list {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  gap: 12px 24px;
+ 
+.breadcrumb span {
+  margin: 0 4px;
 }
-
-.hero-glance-item {
+ 
+.breadcrumb span:first-child {
+  margin-left: 0;
+}
+ 
+/* ---------- Title & Rating ---------- */
+.hero-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  color: #1F2A24;
+  line-height: 1.25;
+  margin-bottom: 8px;
+}
+ 
+.rating-row {
   display: flex;
   align-items: center;
   gap: 6px;
   font-size: 12px;
+  color: #8A938D;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+ 
+.stars img{
+  height: 40px;
+  width: 40px;
+}
+ 
+.rating-score {
   font-weight: 600;
+  color: #1F2A24;
 }
-
-.glance-item-icon {
-  width: 20px;
-  height: 20px;
+ 
+.rating-divider {
+  color: #E3E7E4;
 }
-
-.glancebar-button {
-  padding: 10px 20px;
-  border: 1px solid var(--primary-color);
-  background-color: transparent;
-  border-radius: 30px;
-  font-size: 12px;
-  font-weight: 600;
-  width: auto;
-  max-width: 250px;
-  margin-top: 0;
-  transition: background-color 0.2s;
+ 
+.tee-times {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
 }
-
-.glancebar-button:hover {
-  background-color: rgba(0, 0, 0, 0.05);
-}
-
-
-/* ============================================================
-   DESKTOP BOOKING FORM
-   ============================================================ */
-
-.desktop-booking-form {
-  display: block;
-  width: 100%;
-}
-
-.hero-card {
-  border: 1px solid var(--border-color);
-  border-radius: var(--border-radius-lg);
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
-.card-content {
-  padding: 20px;
-  background-color: #fff;
-}
-
-.price-section {
-  display: flex;
-  align-items: baseline;
-  gap: 8px;
-  margin-bottom: 20px;
-}
-
-.currency {
-  font-size: 24px;
-  font-weight: 700;
-}
-
-.per-night {
-  font-size: 12px;
-  color: var(--text-secondary);
-}
-
-.booking-date {
-  display: flex;
-  gap: 12px;
-  margin-bottom: 12px;
-}
-
-.date-input-group,
-.guest-details {
+ 
+/* ---------- Overall layout wrapper ---------- */
+.hero-layout {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  gap: 20px;
+}
+ 
+.hero-main {
+  min-width: 0;
+}
+ 
+/* ==========================================================================
+   IMAGE — two different components, only one shown at a time
+   ========================================================================== */
+.gallery-carousel {
   position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 20px;
 }
-
-.date-input-group label,
-.guest-details label {
-  position: absolute;
-  top: 6px;
-  left: 12px;
-  font-size: 10px;
-  font-weight: 700;
-  color: var(--text-secondary);
-}
-
-input[type="date"],
-select {
+ 
+.gallery-carousel img.hero-photo {
   width: 100%;
-  padding: 24px 12px 8px;
-  border: 1px solid var(--border-color);
-  border-radius: var(--border-radius-md);
-  font-size: 14px;
-  font-family: inherit;
-  background-color: #fff;
-  cursor: pointer;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+  background: linear-gradient(135deg, #cfe3d6, #a9c9b8);
 }
-
-.guest-details {
-  margin-bottom: 16px;
+ 
+.carousel-dots {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
 }
-
-.availability-status {
-  background-color: #f0f7f9;
-  color: #0b6b7a;
-  padding: 10px 12px;
-  border-radius: var(--border-radius-md);
-  font-size: 14px;
+ 
+.carousel-dots .dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.55);
+}
+ 
+.carousel-dots .dot.active {
+  background: #FFFFFF;
+}
+ 
+.gallery-grid {
+  display: none;
+}
+ 
+/*
+  PASTE YOUR IMAGE LINKS HERE (photos, not icons):
+  - .gallery-carousel img.hero-photo    -> hero photo shown on mobile & tablet
+  - .gallery-grid .gallery-main         -> large hero photo (desktop, left tile)
+  - .gallery-grid .gallery-thumb.top    -> secondary photo (desktop, top-right tile)
+  - .gallery-grid .gallery-thumb.bottom -> secondary photo (desktop, bottom-right tile)
+*/
+ 
+/* ==========================================================================
+   STAY / PLAY CARDS — visible on mobile + tablet, hidden on desktop
+   ========================================================================== */
+.stay-play-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+ 
+.info-card {
+  border: 1px solid #E3E7E4;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+ 
+.info-card-label {
   display: flex;
   align-items: center;
-  gap: 8px;
-  margin-bottom: 20px;
+  gap: 6px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
 }
-
-.price-breakdown {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-bottom: 24px;
-  font-size: 14px;
-}
-
-.price-row {
-  display: flex;
-  justify-content: space-between;
-}
-
-.price-row.total {
-  font-weight: 700;
-}
-
-.check-availability-btn {
-  width: 100%;
-  padding: 14px;
-  background-color: var(--accent-blue);
-  color: #fff;
-  border: none;
-  border-radius: var(--border-radius-md);
-  font-weight: 700;
-  font-size: 16px;
-  margin-bottom: 12px;
-  transition: opacity 0.2s;
-}
-
-.check-availability-btn:hover {
-  opacity: 0.9;
-}
-
-.redirect-notice {
-  text-align: center;
-  font-size: 12px;
-  color: var(--text-secondary);
-}
-
-.card-view-count {
-  background-color: #ebeff3;
-  border-top: 1px solid var(--border-color);
-  padding: 12px 24px;
-  display: flex;
+ 
+.info-card-label.stay { color: #2FA8E0; }
+.info-card-label.play { color: #6FBE44; }
+ 
+.info-card-icon {
+  width: 28px;
+  height: 28px;
+  padding: 5px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+}
+ 
+.info-card-icon.stay { background: #2FA8E0; }
+.info-card-icon.play { background: #6FBE44; }
+ 
+.info-card-stats {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+ 
+.info-card-figure {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #1F2A24;
+}
+ 
+.info-card-figure small {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  color: #8A938D;
+  margin-top: 2px;
+}
+ 
+.info-card-btn {
+  border: none;
+  border-radius: 8px;
+  padding: 11px 0;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  color: #FFFFFF;
+  cursor: pointer;
+  width: 100%;
+}
+ 
+.info-card-btn.stay { background: #2FA8E0; }
+.info-card-btn.play { background: #6FBE44; }
+ 
+.stat-tablet-only {
+  display: none;
+}
+ 
+/* ---------- Description ---------- */
+.description {
   font-size: 14px;
+  color: #5B6660;
+  margin-top: 1rem;
+  margin-bottom: 22px;
 }
-
-.alternative-suggestion {
+ 
+.read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #1F2A24;
+  font-weight: 600;
+  font-size: 13px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+ 
+/* ==========================================================================
+   AT A GLANCE PANEL
+   ========================================================================== */
+.glance-panel {
+  background: #EFF6EE;
+  border-radius: 12px;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+ 
+.glance-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  color: #1F2A24;
   text-align: center;
-  margin-top: 10px;
+}
+ 
+.glance-stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px 16px;
+  flex-wrap: wrap;
   font-size: 12px;
-  color: var(--text-secondary);
-  background-color: #ebeff3;
-  padding: 15px;
+  color: #1F2A24;
+}
+ 
+.glance-stat {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  min-width: 0;
+}
+
+.glance-stat img {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+}
+ 
+.glance-cta {
+  align-self: center;
+  background: #FFFFFF;
+  border: 1px solid #1F2A24;
+  border-radius: 999px;
+  padding: 10px 22px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  color: #1F2A24;
+  cursor: pointer;
+}
+ 
+/* ==========================================================================
+   BOOKING SIDEBAR CARD — desktop only, hidden on mobile + tablet
+   ========================================================================== */
+.booking-sidebar {
+  display: none;
+}
+ 
+.booking-card {
+  border: 1px solid #E3E7E4;
+  border-radius: 12px;
+  padding: 18px 20px;
+  box-shadow: 0 3px 10px rgba(31, 42, 36, 0.16);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+ 
+.booking-price {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #1F2A24;
+}
+ 
+.booking-price .price-label {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  color: #8A938D;
+  margin-left: 6px;
+}
+ 
+.booking-dates {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+ 
+.booking-field {
+  position: relative;
+  border: 1px solid #E3E7E4;
+  border-radius: 8px;
+  padding: 8px 10px 9px;
+}
+
+.booking-field::after,
+.booking-guests::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-right: 2px solid #1F2A24;
+  border-bottom: 2px solid #1F2A24;
+  transform: rotate(45deg);
+  right: 14px;
+  top: 50%;
+  margin-top: -4px;
+}
+ 
+.booking-field-label {
+  display: block;
+  font-size: 10px;
+  font-weight: 600;
+  color: #8A938D;
+  margin-bottom: 2px;
+}
+ 
+.booking-field-value {
+  font-size: 13px;
+  color: #1F2A24;
+  font-weight: 500;
+}
+ 
+.booking-guests {
+  position: relative;
+  border: 1px solid #E3E7E4;
+  border-radius: 8px;
+  padding: 8px 10px 9px;
+}
+ 
+.booking-availability {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 8px;
+  border: 1px solid #D8E7EF;
+  border-radius: 4px;
+  background: #EEF7FB;
+  font-size: 12px;
+  color: #3AA845;
+  font-weight: 600;
+}
+ 
+.booking-availability .check-badge {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #3AA845;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+ 
+.booking-price-breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+  border-top: 1px solid #E3E7E4;
+  border-bottom: 1px solid #E3E7E4;
+  padding: 12px 0;
+}
+ 
+.booking-price-row {
+  display: flex;
+  justify-content: space-between;
+  color: #5B6660;
+}
+ 
+.booking-price-row.total {
+  color: #1F2A24;
+  font-weight: 700;
+}
+ 
+.booking-cta {
+  background: #2FA8E0;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 8px;
+  padding: 13px 0;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  width: 100%;
+}
+ 
+.booking-redirect-note {
+  text-align: center;
+  font-size: 11px;
+  color: #8A938D;
+}
+ 
+.booking-brand {
+  color: #07549A;
+  font-weight: 700;
+}
+ 
+.booking-hot-deal {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: #1F2A24;
+  background: #EEF7FB;
   
-  font-weight: 550;
-  border-radius:5px ;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+  padding: 9px 20px;
+  margin: 0 -20px -18px;
+  min-height: 38px;
+  box-sizing: border-box;
 }
-
-.alternative-suggestion a {
-  color: #0066cc;
-  text-decoration: underline;
+ 
+.booking-not-fit {
+  border: 1px solid #D8E7EF;
+  border-radius: 8px;
+  background: #EEF7FB;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #8A938D;
+  text-align: center;
+  margin-top: 12px;
 }
-
-
-/* ============================================================
-   TABLET — 768px TO 1023px
-   ============================================================ */
-
-@media (max-width: 1023px) {
-
-  .hero-layout-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+ 
+.booking-not-fit a {
+  color: #2FA8E0;
+  font-weight: 600;
+  text-decoration: none;
+}
+ 
+/* ==========================================================================
+   TABLET — 768px to 1023px
+   ========================================================================== */
+@media (min-width: 768px) and (max-width: 1023.98px) {
+ 
+  .page {
+    max-width: 700px;
   }
-
-  .desktop-booking-form {
-    display: none;
+ 
+  .gallery-carousel img.hero-photo {
+    height: 300px;
   }
-
-  .mobile-booking-cards {
-    display: flex;
-    gap: 12px;
-    margin-bottom: 24px;
-  }
-
-  .carousel-dots {
-    position: absolute;
-    bottom: 12px;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    gap: 6px;
-  }
-
-  .hero-images {
+ 
+  .stat-tablet-only {
     display: block;
-    margin-bottom: 16px;
+  }
+ 
+  .info-card {
+    padding: 18px;
   }
 
-  .hero-side-images {
-    display: none;
-  }
-
-  .hero-main-image img {
-    height: 350px;
-    min-height: 0;
-  }
-
-  .hero-glancebar {
-    flex-direction: row;
-    justify-content: space-between;
-    text-align: left;
-    padding: 24px 32px;
-  }
-
-  .glancebar-content {
-    align-items: flex-start;
-  }
-
-  .hero-glance-list {
-    justify-content: flex-start;
-  }
-
-  .glancebar-button {
-    width: auto;
-    margin-top: 0;
-  }
-}
-
-
-/* ============================================================
-   MOBILE — BELOW 768px
-   ============================================================ */
-
-@media (max-width: 767px) {
-
-  .main-content {
-    padding: 16px;
-  }
-
-  .hero-title {
-    font-size: 24px;
-  }
-
-  .hero-subinfo {
+  .glance-stats {
+    gap: 12px 22px;
     font-size: 13px;
   }
 
-  .hero-main-image img {
-    height: 220px;
+  .glance-stat {
+    gap: 6px;
   }
 
-  .mobile-card {
-    padding: 12px;
+  .glance-stat img {
+    width: 18px;
+    height: 18px;
+    flex-basis: 18px;
+  }
+}
+ 
+/* ==========================================================================
+   DESKTOP — 1024px and above
+   ========================================================================== */
+@media (min-width: 1024px) {
+
+  .hero {
+    padding: 0;
+    margin:0;
+  }
+ 
+  .breadcrumb {
+    display: none;
+  }
+ 
+  .hero-title {
+    font-size: 30px;
+    margin-bottom: 0px;
   }
 
-  .card-title-row {
-    font-size: 18px;
-    margin-bottom: 12px;
+  .rating-row {
+    margin-bottom: 0px;  
+  }
+   .stars img{
+    height: 40px;
+    width: 40px;
+  }
+  .hero-layout {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+ 
+  .hero-main {
+    flex: 1 1 80%;
+    max-width: none;
+  }
+ 
+  .gallery-carousel {
+    display: none;
+  }
+ 
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    gap: 2px;
+    aspect-ratio: 2.45 / 1;
+    border-radius: 14px;
+    overflow: hidden;
+  }
+ 
+  .gallery-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    background: linear-gradient(135deg, #cfe3d6, #a9c9b8);
+  }
+ 
+  .gallery-main {
+    grid-row: 1 / 3;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+  }
+ 
+  .gallery-thumbs {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    display: grid;
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    gap: 2px;
+    min-width: 0;
+    min-height: 0;
   }
 
-  .icon-circle {
-    width: 28px;
-    height: 28px;
+  .gallery-thumb-below {
+    position: relative;
+    min-height: 0;
+    overflow: hidden;
   }
 
-  .stat-large {
-    font-size: 20px;
+  .gallery-thumb-below img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    background: linear-gradient(135deg, #cfe3d6, #a9c9b8);
   }
-
-  .stat-small {
-    font-size: 9px;
-    max-width: 65px;
-  }
-
-  .mobile-btn {
-    padding: 10px 4px;
+ 
+  .gallery-view-all {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background: #FFFFFF;
+    border: none;
+    border-radius: 999px;
+    padding: 8px 14px;
     font-size: 12px;
+    font-weight: 600;
+    color: #1F2A24;
+    cursor: pointer;
   }
-
-  .hero-text {
-    font-size: 14px;
-  }
-
-  .hide-on-mobile {
+ 
+  .stay-play-row {
     display: none;
   }
 
-  .hero-glancebar {
-    flex-direction: column;
+ 
+  .glance-panel {
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    text-align: center;
-    gap: 16px;
-    padding: 20px 16px;
+    padding: 16px 24px;
   }
 
-  .glancebar-content {
-    align-items: center;
+  .glance-panel p{
+    width:8rem;
   }
 
-  .hero-glance-list {
-    justify-content: center;
-    gap: 12px 24px;
+  .glance-stats {
+    gap: 4rem;
+    font-size: 1.1rem;
   }
 
-  .glancebar-button {
-    width: 100%;
-    max-width: 250px;
+  .glance-stat img{
+    width: 20px;
+    height: 20px;
+  }
+ 
+  .glance-title {
+    text-align: left;
+  }
+ 
+  .booking-sidebar {
+    display: block;
+    flex: 0 1 20%;
+    max-width: none;
+    position: sticky;
+    top: 24px;
   }
 }
-
+ 

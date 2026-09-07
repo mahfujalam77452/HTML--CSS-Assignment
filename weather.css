@@ -7,7 +7,10 @@
    the full week shows in one row and the four season cards sit side by
    side with vertical dividers between them.
    ========================================================================== */
-
+.weather {
+  padding:0;
+  margin-top:1rem;
+}
 .weather__title {
   font-size: 1.25rem;
   font-weight: 700;
@@ -26,11 +29,14 @@
 /* ---- Weather widget card ---- */
 
 .weather-widget {
-  background-color: #17352b;
-  border-radius: var(--radius-lg);
+  background: linear-gradient(110deg, #3f6876, #319486);
+  border: 1px solid #d0e0dc;
+  border-radius: 10px;
   padding: var(--space-4);
   color: #eaf3ee;
-  margin-bottom: var(--space-6);
+  margin-bottom: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 .weather-widget__header {
@@ -55,20 +61,21 @@
 
 .weather-widget__current {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  gap: var(--space-2);
+  justify-content: center;
+  gap: var(--space-3);
   margin-bottom: var(--space-4);
 }
 
 .weather-widget__current-icon {
-  width: 36px;
-  height: 36px;
+  width: 52px;
+  height: 52px;
   object-fit: contain;
 }
 
 .weather-widget__current-temp {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 700;
 }
 
@@ -128,6 +135,14 @@
   margin-bottom: var(--space-4);
 }
 
+.seasons {
+  border: 1px solid #c9ddd8;
+  border-top: 0;
+  border-radius: 0 0 10px 10px;
+  background-color: #ffffff;
+  padding: var(--space-5);
+}
+
 .seasons__list {
   display: flex;
   gap: var(--space-5);
@@ -152,6 +167,10 @@
 .seasons__icon {
   width: 40px;
   height: 40px;
+  padding: 6px;
+  border: 3px solid #389b91;
+  border-radius: 50%;
+  background-color: #ffffff;
   object-fit: contain;
   margin-bottom: var(--space-3);
 }
@@ -240,11 +259,15 @@
   }
 
   .seasons__list {
-    overflow-x: visible;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: var(--space-4);
+    overflow: visible;
   }
 
   .seasons__card {
-    flex: 1 1 0;
+    min-width: 0;
+    flex: none;
     padding-right: var(--space-5);
     border-right: 1px solid var(--color-border);
   }
@@ -264,11 +287,107 @@
    ========================================================================== */
 @media (min-width: 1024px) {
   .weather{
-    width:75%;
+    width: 80%;
     margin: 0;
     padding: 0;
   }
   .weather__title {
     font-size: 1.375rem;
+  }
+
+  .weather__intro {
+    max-width: none;
+  }
+
+  .weather-widget {
+    padding: var(--space-5) var(--space-6);
+  }
+
+  .seasons {
+    padding: var(--space-6);
+    width: calc(100% - 4px);
+    margin-left: 4px;
+  }
+
+  .weather-widget {
+    margin-bottom: 0;
+    width: calc(100% - 4px);
+    margin-right: 4px;
+  }
+
+  .seasons__title {
+    font-size: 1.25rem;
+  }
+
+  .seasons__list {
+    gap: var(--space-5);
+  }
+}
+
+@media (max-width: 767.98px) {
+  .weather {
+    text-align: center;
+  }
+
+  .weather__title {
+    font-size: 1.25rem;
+    line-height: 1.25;
+  }
+
+  .weather__intro {
+    line-height: 1.5;
+  }
+
+  .weather-widget {
+    padding: var(--space-4) 0;
+    overflow: hidden;
+  }
+
+  .weather-widget__header {
+    margin-bottom: var(--space-2);
+  }
+
+  .weather-widget__forecast {
+    justify-content: flex-start;
+    gap: var(--space-3);
+    padding: 0 var(--space-3);
+  }
+
+  .weather-widget__day {
+    min-width: 52px;
+  }
+
+  .seasons {
+    padding: var(--space-4);
+  }
+
+  .weather-widget {
+    margin-bottom: 0;
+  }
+
+  .seasons__title {
+    text-align: center;
+  }
+
+  .seasons__list {
+    gap: 0;
+  }
+
+  .seasons__card {
+    flex-basis: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .seasons__card-text {
+    max-width: 34ch;
+  }
+
+  .seasons__divider {
+    width: 100%;
+  }
+
+  .seasons__dots {
+    margin-top: var(--space-3);
   }
 }

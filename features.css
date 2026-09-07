@@ -3,7 +3,10 @@
    BEM namespace: .features
    Mobile-first: cards stack on mobile, sit side by side from tablet up.
    ========================================================================== */
-
+.features {
+  padding:0;
+  margin-top:1rem;
+}
 .features__title {
   font-size: 1.125rem;
   font-weight: 700;
@@ -89,7 +92,7 @@
 
 @media (min-width: 1024px) {
   .features{
-    width: 75%;
+    width: 80%;
     padding: 0;
     margin: 3rem 0;
   }
